@@ -15,7 +15,7 @@
     "@types/jsbarcode": "^3.11.4",
     "@zxing/browser": "^0.2.0",
     "jsbarcode": "^3.12.3",
-    "next": "15.0.4",
+    "next": "15.3.3",
     "react": "19.0.0",
     "react-dom": "19.0.0"
   },
