@@ -2,92 +2,51 @@ import Link from "next/link";
 
 export default function HomePage() {
   return (
-    <div className="space-y-8">
-      <section>
-        <h1 className="text-3xl font-semibold">Asset tracking challenge</h1>
-        <p className="text-gray-600 mt-2 max-w-2xl">
-          You&apos;re looking at the starter. The hosted API runs separately and is
-          already populated with about a thousand assets, plus mock facilities and finance
-          data. Use the role switcher in the header to act as either a lab
-          technician (mobile) or an asset manager (desktop).
+    <div className="max-w-lg mx-auto space-y-6 py-4">
+      <div>
+        <h1 className="text-2xl font-semibold text-gray-900">Asset tracking</h1>
+        <p className="text-gray-500 text-sm mt-1">
+          Three systems, one source of truth. Pick a role.
         </p>
-      </section>
+      </div>
 
-      <section className="grid md:grid-cols-2 gap-6">
-        <div className="bg-white border rounded-lg p-5">
-          <h2 className="text-xl font-semibold">Technician</h2>
-          <p className="text-gray-600 text-sm mt-1">
-            Mobile scan workflows. Build these first.
-          </p>
-          <ul className="mt-4 space-y-2">
-            <li>
-              <Link className="text-blue-700 hover:underline" href="/tech">
-                /tech &nbsp;— landing
-              </Link>
-            </li>
-            <li>
-              <Link className="text-blue-700 hover:underline" href="/tech/receive">
-                /tech/receive
-              </Link>
-            </li>
-            <li>
-              <Link className="text-blue-700 hover:underline" href="/tech/store">
-                /tech/store
-              </Link>
-            </li>
-            <li>
-              <Link className="text-blue-700 hover:underline" href="/tech/deploy">
-                /tech/deploy
-              </Link>
-            </li>
-            <li>
-              <Link className="text-blue-700 hover:underline" href="/tech/transfer">
-                /tech/transfer
-              </Link>
-            </li>
-          </ul>
-        </div>
+      <div className="grid gap-4">
+        <Link
+          href="/tech"
+          className="group flex items-center gap-4 bg-white border border-gray-200 rounded-xl p-5 hover:border-blue-300 hover:shadow-sm transition-all"
+        >
+          <div className="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center shrink-0 text-blue-600 text-lg" aria-hidden="true">
+            📱
+          </div>
+          <div className="flex-1 min-w-0">
+            <p className="font-semibold text-gray-900">Technician</p>
+            <p className="text-sm text-gray-500">Scan workflows — receive, store, deploy, transfer.</p>
+          </div>
+          <svg className="w-5 h-5 text-gray-300 group-hover:text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+        </Link>
 
-        <div className="bg-white border rounded-lg p-5">
-          <h2 className="text-xl font-semibold">Manager</h2>
-          <p className="text-gray-600 text-sm mt-1">
-            Desktop dashboard. Build after the scan workflows.
-          </p>
-          <ul className="mt-4 space-y-2">
-            <li>
-              <Link className="text-blue-700 hover:underline" href="/manager">
-                /manager &nbsp;— landing
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="text-blue-700 hover:underline"
-                href="/manager/reconcile"
-              >
-                /manager/reconcile
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </section>
+        <Link
+          href="/manager"
+          className="group flex items-center gap-4 bg-white border border-gray-200 rounded-xl p-5 hover:border-blue-300 hover:shadow-sm transition-all"
+        >
+          <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center shrink-0 text-green-600 text-lg" aria-hidden="true">
+            📊
+          </div>
+          <div className="flex-1 min-w-0">
+            <p className="font-semibold text-gray-900">Asset manager</p>
+            <p className="text-sm text-gray-500">Browse assets, review event history, run reconciliation.</p>
+          </div>
+          <svg className="w-5 h-5 text-gray-300 group-hover:text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+        </Link>
+      </div>
 
-      <section className="bg-amber-50 border border-amber-200 rounded-lg p-5">
-        <h2 className="text-lg font-semibold">Before you start</h2>
-        <ol className="list-decimal ml-5 mt-2 space-y-1 text-sm text-gray-700">
-          <li>
-            Make sure the API is running (<code>pnpm dev</code> from the
-            monorepo root brings up both).
-          </li>
-          <li>
-            Read <code>starter/docs/api-reference.md</code> and{" "}
-            <code>starter/docs/tips.md</code>.
-          </li>
-          <li>
-            Read the full brief at <code>docs/CHALLENGE.md</code> in the
-            monorepo.
-          </li>
-        </ol>
-      </section>
+      <p className="text-xs text-gray-400 text-center">
+        Use the role switcher in the header to change your user context.
+      </p>
     </div>
   );
 }

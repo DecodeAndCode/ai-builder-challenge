@@ -3,8 +3,8 @@ import { RoleSwitcher } from "@/components/RoleSwitcher";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Asset tracking — challenge starter",
-  description: "Take-home: build the user experience on top of the asset tracking API.",
+  title: "Asset tracking",
+  description: "Lab equipment asset tracking — scan workflows and manager dashboard.",
 };
 
 export default function RootLayout({
@@ -15,11 +15,33 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <header className="border-b bg-white">
-          <div className="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
-            <a href="/" className="font-semibold text-gray-900">
-              Asset tracking
-            </a>
+        <header className="border-b bg-white sticky top-0 z-40">
+          <div className="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+            <div className="flex items-center gap-6">
+              <a href="/" className="font-semibold text-gray-900 shrink-0">
+                Asset tracking
+              </a>
+              <nav className="hidden sm:flex items-center gap-1 text-sm">
+                <a
+                  href="/tech"
+                  className="px-3 py-1.5 rounded-md text-gray-600 hover:bg-gray-100 hover:text-gray-900 transition-colors"
+                >
+                  Scan
+                </a>
+                <a
+                  href="/manager"
+                  className="px-3 py-1.5 rounded-md text-gray-600 hover:bg-gray-100 hover:text-gray-900 transition-colors"
+                >
+                  Assets
+                </a>
+                <a
+                  href="/manager/reconcile"
+                  className="px-3 py-1.5 rounded-md text-gray-600 hover:bg-gray-100 hover:text-gray-900 transition-colors"
+                >
+                  Reconcile
+                </a>
+              </nav>
+            </div>
             <RoleSwitcher />
           </div>
         </header>
