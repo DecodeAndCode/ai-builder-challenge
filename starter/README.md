@@ -1,6 +1,6 @@
 # Asset tracking — submission README
 
-Built by Chiranjeev Kundu for the Cerebras AI Engineering Intern (Manufacturing) challenge.
+Built by Chiranjeev Kumar for the Cerebras AI Engineering Intern (Manufacturing) challenge.
 
 **Live demo:** https://ai-builder-challenge.vercel.app
 **API:** https://cerebras-asset-api.fly.dev
