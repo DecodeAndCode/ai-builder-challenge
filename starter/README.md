@@ -2,6 +2,10 @@
 
 Built by Chiranjeev Kundu for the Cerebras AI Engineering Intern (Manufacturing) challenge.
 
+**Live demo:** https://ai-builder-challenge.vercel.app
+**API:** https://cerebras-asset-api.fly.dev
+**Repo:** https://github.com/DecodeAndCode/ai-builder-challenge
+
 ## What I built
 
 A Next.js 15 frontend over the pre-built Fastify/SQLite asset-tracking API. Four scan workflows for lab technicians (keyboard scanner + phone camera), a manager dashboard with pagination and filtering over ~1,000 assets, and a three-way reconciliation report that categorizes discrepancies between operations, facilities, and finance.
