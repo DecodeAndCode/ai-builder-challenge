@@ -1,11 +1,5 @@
 # Asset tracking challenge
 
-**Submission by Chiranjeev Kundu**
-**Live demo:** https://ai-builder-challenge.vercel.app
-**API:** https://cerebras-asset-api.fly.dev
-
----
-
 A take-home challenge for software engineering interns. Candidates build a frontend on top of a small local backend that simulates the operational asset tracking system of a multi-site research lab.
 
 This is a **monorepo** with two apps you run side by side:
